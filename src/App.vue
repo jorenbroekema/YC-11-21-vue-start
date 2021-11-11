@@ -10,9 +10,10 @@
   <ol>
     <li v-for="item in list" v-bind:key="item.id">{{ item.value }}</li>
   </ol>
-  <p v-if="bool">Only show this when bool is true</p>
+
+  <p v-if="finalBool">Only show this when bool is true</p>
   <p v-if="!bool">Only show this when bool is false</p>
-  <HelloWorld msg="planet"></HelloWorld>
+  <TodoList msg="planet"></TodoList>
 </template>
 
 <style scoped>
@@ -22,11 +23,11 @@ h1 {
 </style>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import TodoList from "./components/TodoList.vue";
 
 export default {
   components: {
-    HelloWorld,
+    TodoList,
   },
   data() {
     return {
